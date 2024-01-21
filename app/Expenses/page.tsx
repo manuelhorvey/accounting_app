@@ -47,7 +47,7 @@ const Expenses = () => {
           </form>
         </div>
 
-        <div className="col-span-2">
+        <div className="col-span-1">
           <h2 className="text-xl font-bold mb-2">Expenses</h2>
           {expenses.map((expense, index) => (
             <div key={index} className="mb-2 p-2 border rounded">

@@ -18,12 +18,15 @@ const Employees = () => {
     setEditIndex(index);
     if (index !== null) {
       setFormData(employees[index]);
+    }else{
+      setFormData({name:'', job:'', contact:'', wage:''});
     }
-    document.getElementById('Employee_Modal')?.showModal();
+    (document.getElementById('Employee_Modal') as HTMLDialogElement)?.showModal();
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+    
   };
 
   const handleSubmit = (e: FormEvent) => {
@@ -31,13 +34,14 @@ const Employees = () => {
     if (formData.name && formData.job && formData.contact && formData.wage) {
       if(editIndex===null){
         setEmployees([...employees, formData]);
+        setFormData({name:'', job:'', contact:'', wage:''});
     } else {
       setEmployees(employees.map((employee, index) => index === editIndex ? formData : employee));
     }
   }else {
     alert('Please fill out all fields')
   }
-    document.getElementById('Employee_Modal')?.close();
+    (document.getElementById('Employee_Modal') as HTMLDialogElement)?.close();
     setFormData({ name: '', job: '', contact: '', wage: '' });
   };
 

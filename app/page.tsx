@@ -18,7 +18,7 @@ interface CardProps {
 
 
 const Card: React.FC<CardProps> = ({ Icons, title, description, buttonText, href='/' }) => (
-  <div className=" border-red-500 border-2 w-1/4 p-5 card card-compact max-h-96 bg-base-100 shadow-lg rounded-lg bg-sky-50 hover:bg-blue-100 transition-colors duration-200">
+  <div className=" border-green-500 border-2 w-1/4 p-5 card card-compact max-h-96 bg-base-100 shadow-lg rounded-l hover:bg-blue-100 transition-colors duration-200">
   <figure className=" text-6xl items-center justify-center rounded-sm"><Icons/></figure>
   <div className="card-body">
     <div className="card-title font-bold items-center">{title}</div>
@@ -68,10 +68,10 @@ export default function Home() {
       />
       <Card 
         Icons={MdManageAccounts}
-        title={"Accounts"}
+        title={"AgentsRegistation"}
         description={"Manage, Edit and Add Accounts"}
         buttonText={"View"}
-        href="/Accounts"
+        href="/RegisterAgents"
       />
     </div>
   );
