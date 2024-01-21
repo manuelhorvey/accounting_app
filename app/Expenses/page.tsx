@@ -25,7 +25,7 @@ const Expenses = () => {
 
   return (
     <div className="container mx-auto px-4">
-      <h1 className="text-2xl font-bold mb-4">Company Accounting App</h1>
+      <h1 className="text-2xl font-bold mb-4">Add and Manage all your expenses in one place</h1>
 
       <div className="grid grid-cols-3 gap-4">
         <div>
@@ -33,17 +33,17 @@ const Expenses = () => {
           <form onSubmit={handleSubmit}>
             <label className="block mb-2">
               Name:
-              <input type="text" name="name" value={newExpense.name} onChange={handleInputChange} className="w-full mt-1" />
+              <input type="text" name="name" value={newExpense.name} onChange={handleInputChange} className="w-full mt-1 border-sky-300 border-2" />
             </label>
             <label className="block mb-2">
               Amount:
-              <input type="number" name="amount" value={newExpense.amount} onChange={handleInputChange} className="w-full mt-1" />
+              <input type="number" name="amount" value={newExpense.amount} onChange={handleInputChange} className="w-full mt-1 border-sky-300 border-2" />
             </label>
             <label className="block mb-2">
               Category:
-              <input type="text" name="category" value={newExpense.category} onChange={handleInputChange} className="w-full mt-1" />
+              <input type="text" name="category" value={newExpense.category} onChange={handleInputChange} className="w-full mt-1 border-sky-300 border-2" />
             </label>
-            <button type="submit" className="mt-2 px-4 py-2 bg-blue-500 text-white rounded">Add</button>
+            <button type="submit" className="mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-sky-600">Add</button>
           </form>
         </div>
 
